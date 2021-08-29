@@ -76,8 +76,8 @@ insert into customers values ('03', 'Khách hàng 3', 'VP', '07202202');
 insert into customers values ('04', 'Khách hàng 4', 'VT', '06397397');
 select * from logindb.customers;
 
-create user if not exists 'vtca'@'localhost' identified by 'vtcacademy';
-grant all on LoginDB.* to 'vtca'@'localhost';
+create user if not exists 'pf15'@'localhost' identified by 'vtcacademy';
+grant all on LoginDB.* to 'pf15'@'localhost';
 
 insert into cashiers values('001', 'Thu ngân 1', 'pf15', 'vtcacademy', '02406406');
 select * from cashiers;
