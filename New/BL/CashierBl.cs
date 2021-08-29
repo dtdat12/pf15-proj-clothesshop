@@ -8,6 +8,7 @@ namespace BL
     {
         private CashierDal dal = new CashierDal();
         public int Login(Cashier cashier){
+            
             return dal.Login(cashier);
         }
     }

@@ -9,5 +9,7 @@ namespace Persistence
         public string UserName {set;get;}
         public string Password {set;get;}
         public string Telephone {set;get;}
+        
     }
+
 }
