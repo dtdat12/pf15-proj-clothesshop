@@ -16,14 +16,6 @@ namespace DAL
             cashier.UserName+"' and password='"+
             Md5Algorithms.CreateMD5(cashier.Password)+"';";
           MySqlDataReader reader = command.ExecuteReader();
-          if(reader.Read()){
-            login = reader.GetInt32("role");
-          }else
-          {
-              login = 0;
-          }
-          reader.Close();
-          connection.Close();
         }catch{
           login = -1;
         }

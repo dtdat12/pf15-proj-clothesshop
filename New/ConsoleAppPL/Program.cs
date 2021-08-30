@@ -24,7 +24,6 @@ namespace ConsoleAppPL
             }
         }
         
-        
         static string GetPassword()
         {
             var pass = string.Empty;

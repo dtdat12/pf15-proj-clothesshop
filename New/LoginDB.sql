@@ -79,9 +79,10 @@ select * from logindb.customers;
 create user if not exists 'root'@'localhost' identified by '12345abc';
 grant all on LoginDB.* to 'root'@'localhost';
 
-insert into cashiers values('001', 'Thu ngân 1', 'pf15', '', '02406406');
+insert into cashiers values('001', 'Thu ngân 1', 'clothes', 'f637569d1f2b1af93c463b312f2d77de', '02406406');
+-- ShopClothes
 select * from cashiers;
-select * from cashiers where user_name='pf15' and user_pass='';
+select * from cashiers where user_name='clothes' and user_pass='f637569d1f2b1af93c463b312f2d77de';
 
 insert into colors values ('1001', 'Black');
 insert into colors values ('1002', 'White');
