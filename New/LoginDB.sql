@@ -117,8 +117,8 @@ insert into InvoiceDetails(invoice_no, item_id, item_price) values
 (4, 2, 499.000);
 select * from InvoiceDetails;
 
-create user if not exists 'root'@'localhost' identified by '12345abc';
-grant all on LoginDB.* to 'root'@'localhost';
+create user if not exists 'vtca'@'localhost' identified by 'vtcacademy';
+grant all on LoginDB.* to 'vtca'@'localhost';
 
 -- ShopClothes
 insert into Cashiers (cashier_id, cashier_name, user_name, user_pass, telephone) values

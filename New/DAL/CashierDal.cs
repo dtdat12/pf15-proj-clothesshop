@@ -16,7 +16,7 @@ namespace DAL
           Md5Algorithms.CreateMD5(cashier.Password)+"';";
           MySqlDataReader reader = command.ExecuteReader();
           if(reader.Read()){
-            login = reader.GetInt32("role");
+            login = reader.GetInt32("");
           }else
           {
               login = 0;
