@@ -81,7 +81,7 @@ grant all on LoginDB.* to 'vtca'@'localhost';
 
 insert into cashiers values('001', 'Thu ngân 1', 'pf15', 'vtcacademy', '02406406');
 select * from cashiers;
-select * from cashiers where user_name='pf15' and user_pass='vtcacademy';
+select * from cashiers where user_name='cc' and user_pass='vtcacademy';
 
 insert into colors values ('1001', 'Black');
 insert into colors values ('1002', 'White');
