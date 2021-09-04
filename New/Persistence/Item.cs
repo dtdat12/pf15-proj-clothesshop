@@ -9,7 +9,8 @@ namespace Persistence
         public decimal ItemPrice {set;get;}
         public string Description {set;get;}
 
-        public override bool Equals(object obj){
+        public override bool Equals(object obj)
+        {
             if(obj is Item){
                 return ((Item)obj).ItemId.Equals(ItemId);
             }
