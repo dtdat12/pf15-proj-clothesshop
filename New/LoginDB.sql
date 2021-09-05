@@ -120,7 +120,7 @@ select * from InvoiceDetails;
 create user if not exists 'vtca'@'localhost' identified by 'vtcacademy';
 grant all on LoginDB.* to 'vtca'@'localhost';
 
--- ShopClothes
+-- Password: ShopClothes
 insert into Cashiers (cashier_id, cashier_name, user_name, user_pass, telephone) values
 		(1, 'shopclothes', 'Clothes', 'f637569d1f2b1af93c463b312f2d77de', '0982942754');
 select * from Cashiers;
