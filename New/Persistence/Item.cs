@@ -17,7 +17,8 @@ namespace Persistence
             return false;
         }
 
-        public override int GetHashCode(){
+        public override int GetHashCode()
+        {
             return ItemId.GetHashCode();
         }
     }
