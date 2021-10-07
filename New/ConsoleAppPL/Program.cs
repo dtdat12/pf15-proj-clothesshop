@@ -188,10 +188,12 @@ namespace ConsoleAppPL
             cInvoice:
             InvoiceDetail invoiceDetail = new InvoiceDetail();
             Item item = SearchItemByID();
+
             if(item != null)
             {
                 invoiceDetail.itemID = item.ItemId;
                 invoiceDetail.itemPrice = item.ItemPrice;
+                
                 if(checkItemExistInvoice(invoiceDetail,invoiceDetails))
                 {
                     Console.WriteLine("\nItem included in the invoice!");
@@ -215,6 +217,7 @@ namespace ConsoleAppPL
                         Console.WriteLine("+-------------------------------------------------------+");
                         i++;
                     }
+
                     Console.WriteLine("\nEnter ordinal numbers: ");
                     int c;
                     chooseDetail:
@@ -226,6 +229,7 @@ namespace ConsoleAppPL
                     }
                     invoiceDetail.itemDetail = itemDetails[c];
                     invoiceDetails.Add(invoiceDetail);
+
                     Console.WriteLine("\nEnter item quantity: ");
                     inputQuantity:
                     invoiceDetail.quantity = InputUtil.readINT();
@@ -241,10 +245,12 @@ namespace ConsoleAppPL
             }
             Console.WriteLine("Do you want add another items to invoice? (0-No/1-Yes)");
             choose = InputUtil.readINT();
+
             if(choose==1)
             {
                 goto cInvoice;
             }
+
             Console.Clear();
             Console.WriteLine("                    +---------------------------+");
             Console.WriteLine("                    |     CUSTOMER INFO ADD     |");
@@ -265,10 +271,12 @@ namespace ConsoleAppPL
             }
             Console.WriteLine("\nDo you want to create invoice? (0-No/1-Yes)");
             choose = InputUtil.readINT();
+
             if(choose==0)
             {
                 goto start;
             }
+
             CustomerDAL customerDAL = new CustomerDAL();
             long cusID = customerDAL.InsertCustomer(customer);
             InvoiceDAL invoiceDAL = new InvoiceDAL();
@@ -316,7 +324,8 @@ namespace ConsoleAppPL
                 total += invoiceDetail.itemPrice*invoiceDetail1.quantity;
                 Console.WriteLine("+------------------------------------------------------------------------------------------+");
             }
-            Console.WriteLine("                                                               Total amount: "+String.Format("{0:0,0 VND}", total));
+
+            Console.WriteLine("                                                                Total amount: "+String.Format("{0:0,0 VND}", total));
             Console.WriteLine("--------------------------------------------------------------------------------------------");
             Console.WriteLine("Amount in words: ");
             Console.WriteLine("--------------------------------------------------------------------------------------------");
@@ -402,6 +411,7 @@ namespace ConsoleAppPL
             Console.WriteLine();
             Cashier cashier = new Cashier(){UserName=userName, Password=pass};
             int login = (new CashierDAL()).Login(cashier);
+            
             if(login <= 0)
             {
                 Console.Clear();
@@ -439,7 +449,6 @@ namespace ConsoleAppPL
                 }
 
             } while (key != ConsoleKey.Enter);
-
             return pass;
         }
 
@@ -481,6 +490,7 @@ namespace ConsoleAppPL
 
                 if (number < 20)
                 words += unitsMap[number];
+
                 else
                 {
                     words += tensMap[number / 10];
