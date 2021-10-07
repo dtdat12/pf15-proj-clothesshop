@@ -18,7 +18,7 @@ namespace ConsoleAppPL
             if(items.Count == 0)
             {
                 Console.WriteLine("\nNot found items!");
-                Console.WriteLine("Press enter to back search menu...");
+                Console.WriteLine("Press any keys to back search menu...");
                 Console.ReadKey();
                 Console.Clear();
                 return items;
@@ -33,7 +33,7 @@ namespace ConsoleAppPL
                 Console.WriteLine(i.ToString());
                 Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
             }
-            Console.WriteLine("\nPress enter to back search menu...");
+            Console.WriteLine("\nPress any keys to back search menu...");
             Console.ReadKey();
             Console.Clear();
             return items;
@@ -49,7 +49,7 @@ namespace ConsoleAppPL
             if(item == null)
             {
                 Console.WriteLine("\nNot found item!");
-                Console.WriteLine("Press enter to continue...");
+                Console.WriteLine("Press any keys to continue...");
                 Console.ReadKey();
                 Console.Clear();
                 return null;
@@ -63,7 +63,7 @@ namespace ConsoleAppPL
                 Console.WriteLine(item.ToString());
                 Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
             }
-            Console.WriteLine("\nPress enter to continue...");
+            Console.WriteLine("\nPress any keys to continue...");
             Console.ReadKey();
             Console.Clear();
             return item;
@@ -81,7 +81,7 @@ namespace ConsoleAppPL
             if(items.Count == 0)
             {
                 Console.WriteLine("\nNot found items!");
-                Console.WriteLine("Press enter to back search menu...");
+                Console.WriteLine("Press any keys to back search menu...");
                 Console.ReadKey();
                 Console.Clear();
                 return items;
@@ -96,7 +96,7 @@ namespace ConsoleAppPL
                 Console.WriteLine(i.ToString());
                 Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
             }
-            Console.WriteLine("\nPress enter to back search menu...");
+            Console.WriteLine("\nPress any keys to back search menu...");
             Console.ReadKey();
             Console.Clear();
             return items;
@@ -107,14 +107,16 @@ namespace ConsoleAppPL
             int choose = 0;
             do
             {
-                string logo = @"=============================================================
-   ______ ______  ___    _______   ____  ________ __________
-  / __/ // / __ \/ _ \  / ___/ /  / __ \/_  __/ // / __/ __/
- _\ \/ _  / /_/ / ___/ / /__/ /__/ /_/ / / / / _  / _/_\ \  
-/___/_//_/\____/_/     \___/____/\____/ /_/ /_//_/___/___/";
+                string logo = @"===================================================================
+   ____ _       _   _     _               ____  _                 
+  / ___| | ___ | |_| |__ (_)_ __   __ _  / ___|| |__   ___  _ __  
+ | |   | |/ _ \| __| '_ \| | '_ \ / _` | \___ \| '_ \ / _ \| '_ \ 
+ | |___| | (_) | |_| | | | | | | | (_| |  ___) | | | | (_) | |_) |
+  \____|_|\___/ \__|_| |_|_|_| |_|\__, | |____/|_| |_|\___/| .__/ 
+                                  |___/                    |_|";
                 Console.WriteLine(logo);
                 Console.WriteLine("\t");
-                string line = "=============================================================";
+                string line = "===================================================================";
                 Console.WriteLine(line);
                 Console.WriteLine("\t");
                 Console.WriteLine("+-----------------------------+");
@@ -143,8 +145,8 @@ namespace ConsoleAppPL
                         Console.Clear();
                         break;
                     default:
-                        Console.WriteLine("\nIncorrect choice! Please re-enter choice from 1-4.");
-                        Console.WriteLine("Press enter to continue...");
+                        Console.WriteLine("\nIncorrect choice! Please re-enter choice from 1-4!");
+                        Console.WriteLine("Press any keys to continue...");
                         Console.ReadKey();
                         Console.Clear();
                         break;
@@ -179,7 +181,7 @@ namespace ConsoleAppPL
             Console.WriteLine("Telephone: ");
             customer.Telephone = Console.ReadLine();
             Console.WriteLine("\nAdd successful customer information!");
-            Console.WriteLine("Press enter to continue...");
+            Console.WriteLine("Press any keys to continue...");
             Console.ReadKey();
             List<InvoiceDetail> invoiceDetails = new List<InvoiceDetail>();
             int choose = 0;
@@ -244,9 +246,9 @@ namespace ConsoleAppPL
                 goto cInvoice;
             }
             Console.Clear();
-            Console.WriteLine("+-------------------------------------------------------+");
-            Console.WriteLine("|                  CUSTOMER INFO ADD                    |");
-            Console.WriteLine("+-------------------------------------------------------+");
+            Console.WriteLine("                    +---------------------------+");
+            Console.WriteLine("                    |     CUSTOMER INFO ADD     |");
+            Console.WriteLine("                    +---------------------------+");
             Console.WriteLine("\t");
             Console.WriteLine(customer.ToString());
             Console.WriteLine("\t");
@@ -284,16 +286,18 @@ namespace ConsoleAppPL
             }
             Console.Clear();
             string logo = @"                     
-              ______ ______  ___    _______   ____  ________ __________
-             / __/ // / __ \/ _ \  / ___/ /  / __ \/_  __/ // / __/ __/
-            _\ \/ _  / /_/ / ___/ / /__/ /__/ /_/ / / / / _  / _/_\ \  
-           /___/_//_/\____/_/     \___/____/\____/ /_/ /_//_/___/___/";
+          ____ _       _   _     _               ____  _                 
+         / ___| | ___ | |_| |__ (_)_ __   __ _  / ___|| |__   ___  _ __  
+        | |   | |/ _ \| __| '_ \| | '_ \ / _` | \___ \| '_ \ / _ \| '_ \ 
+        | |___| | (_) | |_| | | | | | | | (_| |  ___) | | | | (_) | |_) |
+         \____|_|\___/ \__|_| |_|_|_| |_|\__, | |____/|_| |_|\___/| .__/ 
+                                         |___/                    |_|";
             Console.WriteLine(logo);
             Console.WriteLine("\n               DC: 18 Tam Trinh, Minh Khai, Hai Ba Trung, Ha Noi");
-            Console.WriteLine("                             DT: 012.3400.0056");
+            Console.WriteLine("                              DT: 012.3400.0056");
             Console.WriteLine("\n                                BILL OF SALE\n");
             Console.WriteLine(invoice.ToString());
-            Console.WriteLine("Seller: SHOPCLOTHES                                    Cashier Name: shopclothes\n");
+            Console.WriteLine("Seller: ClothingShop                                   Cashier Name: dtdat\n");
             Console.WriteLine("-------------------------------------------------------------------------------------------\n");
             Console.WriteLine(customer.ToString()); 
             Console.WriteLine("\t");
@@ -316,8 +320,8 @@ namespace ConsoleAppPL
             Console.WriteLine("--------------------------------------------------------------------------------------------");
             Console.WriteLine("Amount in words: ");
             Console.WriteLine("--------------------------------------------------------------------------------------------");
-            Console.WriteLine("\n                          THANK YOU AND SEE YOU AGAIN\n");
-            Console.WriteLine("                 Hotline: 12345678910     Website: shopclothes.com");
+            Console.WriteLine("\n                              THANK YOU AND SEE YOU AGAIN\n");
+            Console.WriteLine("                     Hotline: 1900333999     Website: clothingshop.com");
             Console.WriteLine("\n\nPress any keys to continue...");
             Console.ReadKey();
             Console.Clear();
@@ -328,14 +332,16 @@ namespace ConsoleAppPL
             int choose = 0;
             do
             {
-                string logo = @"=============================================================
-   ______ ______  ___    _______   ____  ________ __________
-  / __/ // / __ \/ _ \  / ___/ /  / __ \/_  __/ // / __/ __/
- _\ \/ _  / /_/ / ___/ / /__/ /__/ /_/ / / / / _  / _/_\ \  
-/___/_//_/\____/_/     \___/____/\____/ /_/ /_//_/___/___/";
+                string logo = @"===================================================================
+   ____ _       _   _     _               ____  _                 
+  / ___| | ___ | |_| |__ (_)_ __   __ _  / ___|| |__   ___  _ __  
+ | |   | |/ _ \| __| '_ \| | '_ \ / _` | \___ \| '_ \ / _ \| '_ \ 
+ | |___| | (_) | |_| | | | | | | | (_| |  ___) | | | | (_) | |_) |
+  \____|_|\___/ \__|_| |_|_|_| |_|\__, | |____/|_| |_|\___/| .__/ 
+                                  |___/                    |_|";
                 Console.WriteLine(logo);
                 Console.WriteLine("\t");
-                string line = "=============================================================";
+                string line = "===================================================================";
                 Console.WriteLine(line);
                 Console.WriteLine("\t");
                 Console.WriteLine("+-----------------------------+");
@@ -361,8 +367,8 @@ namespace ConsoleAppPL
                         break;
                     default:
                         Console.WriteLine("\t");
-                        Console.WriteLine("Incorrect choice! Please re-enter choice from 1-3.");
-                        Console.WriteLine("Press enter to continue...");
+                        Console.WriteLine("Incorrect choice! Please re-enter choice from 1-3!");
+                        Console.WriteLine("Press any keys to continue...");
                         Console.ReadKey();
                         Console.Clear();
                         break;
@@ -373,14 +379,16 @@ namespace ConsoleAppPL
         static void Main(string[] args)
         {
             startLogin:
-            string logo = @"=============================================================
-   ______ ______  ___    _______   ____  ________ __________
-  / __/ // / __ \/ _ \  / ___/ /  / __ \/_  __/ // / __/ __/
- _\ \/ _  / /_/ / ___/ / /__/ /__/ /_/ / / / / _  / _/_\ \  
-/___/_//_/\____/_/     \___/____/\____/ /_/ /_//_/___/___/";
+            string logo = @"===================================================================
+   ____ _       _   _     _               ____  _                 
+  / ___| | ___ | |_| |__ (_)_ __   __ _  / ___|| |__   ___  _ __  
+ | |   | |/ _ \| __| '_ \| | '_ \ / _` | \___ \| '_ \ / _ \| '_ \ 
+ | |___| | (_) | |_| | | | | | | | (_| |  ___) | | | | (_) | |_) |
+  \____|_|\___/ \__|_| |_|_|_| |_|\__, | |____/|_| |_|\___/| .__/ 
+                                  |___/                    |_|";
             Console.WriteLine(logo);
             Console.WriteLine("\t");
-            string line = "=============================================================";
+            string line = "===================================================================";
             Console.WriteLine(line);
             Console.WriteLine("\t");
             Console.WriteLine("+-----------------------------+");
@@ -398,7 +406,7 @@ namespace ConsoleAppPL
             {
                 Console.Clear();
                 Console.WriteLine("Your UserName or Password entered is incorrect?");
-                Console.WriteLine("Press enter to log in again...");
+                Console.WriteLine("Press any keys to log in again...");
                 Console.ReadKey();
                 Console.Clear();
                 goto startLogin;

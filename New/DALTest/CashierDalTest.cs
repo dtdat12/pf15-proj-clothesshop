@@ -7,7 +7,7 @@ namespace DALTest
 {
     public class CashierDalTest
     {
-        private CashierDal dal = new CashierDal();
+        private CashierDAL dal = new CashierDAL();
        
         [Fact]
         public void LoginTest1()

@@ -77,7 +77,7 @@ grant all on LoginDB.* to 'vtca'@'localhost';
 
 -- Password: ShopClothes
 insert into Cashiers (cashier_id, cashier_name, user_name, user_pass, telephone) values
-(1, 'shopclothes', 'Clothes', 'f637569d1f2b1af93c463b312f2d77de', '0982942754');
+(1, 'dtdat', 'Clothes', 'f637569d1f2b1af93c463b312f2d77de', '0982942754');
 select * from Cashiers;
 -- select * from Cashiers where user_name='Clothes' and user_pass='f637569d1f2b1af93c463b312f2d77de';
 
