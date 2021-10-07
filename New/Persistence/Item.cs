@@ -2,28 +2,30 @@ using System;
 
 namespace Persistence
 {
-    public static class ItemStatus{
-        public const int NOT_ACTIVE = 0;
-        public const int ACTIVE = 1;
-    }
-    
     public class Item
     {
         public int ItemId {set;get;}
         public string ItemName {set;get;}
         public decimal ItemPrice {set;get;}
-        public string Description {set;get;}
+        public string ItemDescription {set;get;}
 
         public override bool Equals(object obj)
         {
-            if(obj is Item){
+            if(obj is Item)
+            {
                 return ((Item)obj).ItemId.Equals(ItemId);
             }
             return false;
         }
 
-        public override int GetHashCode(){
+        public override int GetHashCode()
+        {
             return ItemId.GetHashCode();
         }
+
+        public override string ToString()
+        {
+            return String.Format("| {0}\t| {1,-25} \t| {2,-65} \t| {3,-5}\t |",ItemId,ItemName,ItemDescription,ItemPrice);
+        }   
     }
 }

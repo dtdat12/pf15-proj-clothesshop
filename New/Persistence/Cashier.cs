@@ -10,5 +10,4 @@ namespace Persistence
         public string Password {set;get;}
         public string Telephone {set;get;} 
     }
-
 }

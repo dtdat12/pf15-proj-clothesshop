@@ -6,8 +6,9 @@ namespace BL
 {
     public class CashierBl
     {
-        private CashierDal dal = new CashierDal();
-        public int Login(Cashier cashier){
+        private CashierDAL dal = new CashierDAL();
+        public int Login(Cashier cashier)
+        {
             return dal.Login(cashier);
         }
     }
