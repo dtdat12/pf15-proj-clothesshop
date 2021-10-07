@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Persistence;
 using BL;
 
@@ -17,7 +17,8 @@ namespace ConsoleAppPL
             Cashier cashier = new Cashier(){UserName=userName, Password=pass};
             CashierBl bl = new CashierBl();
             int login = bl.Login(cashier);
-            if(login <= 0){
+            if(login <= 0)
+            {
                 Console.WriteLine("Can't Login");
             }else{
                 Console.WriteLine("Wellcome to System...");
@@ -33,7 +34,6 @@ namespace ConsoleAppPL
             {
                 var keyInfo = Console.ReadKey(intercept: true);
                 key = keyInfo.Key;
-
                 if (key == ConsoleKey.Backspace && pass.Length > 0)
                 {
                     Console.Write("\b \b");
