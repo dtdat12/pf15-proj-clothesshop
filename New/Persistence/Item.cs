@@ -11,7 +11,8 @@ namespace Persistence
 
         public override bool Equals(object obj)
         {
-            if(obj is Item){
+            if(obj is Item)
+            {
                 return ((Item)obj).ItemId.Equals(ItemId);
             }
             return false;
@@ -23,4 +24,3 @@ namespace Persistence
         }
     }
 }
-
