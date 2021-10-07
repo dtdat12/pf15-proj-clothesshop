@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Persistence
 {
@@ -8,8 +8,6 @@ namespace Persistence
         public string CashierName {set;get;}
         public string UserName {set;get;}
         public string Password {set;get;}
-        public string Telephone {set;get;}
-        
+        public string Telephone {set;get;}   
     }
-
 }
