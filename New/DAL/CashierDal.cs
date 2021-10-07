@@ -14,8 +14,13 @@ namespace DAL
           MySqlConnection connection = DBHelper.GetConnection();
           connection.Open();
           MySqlCommand command = connection.CreateCommand();
+<<<<<<< HEAD
           command.CommandText = "select * from Cashiers where user_name='"+
           cashier.UserName+"' and user_pass='"+
+=======
+          command.CommandText = "select * from Cashiers where username='"+
+          cashier.UserName+"' and password='"+
+>>>>>>> a323dde2b37753a0b80afd4caebd54e46a9c496f
           Md5Algorithms.CreateMD5(cashier.Password)+"';";
           MySqlDataReader reader = command.ExecuteReader();
           if(reader.Read())

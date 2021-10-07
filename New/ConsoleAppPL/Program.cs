@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Persistence;
 using DAL;
 using System.Collections.Generic;
@@ -401,6 +401,7 @@ namespace ConsoleAppPL
             string pass = GetPassword();
             Console.WriteLine();
             Cashier cashier = new Cashier(){UserName=userName, Password=pass};
+<<<<<<< HEAD
             int login = (new CashierDAL()).Login(cashier);
             if(login <= 0)
             {
@@ -410,6 +411,13 @@ namespace ConsoleAppPL
                 Console.ReadKey();
                 Console.Clear();
                 goto startLogin;
+=======
+            CashierBl bl = new CashierBl();
+            int login = bl.Login(cashier);
+            if(login <= 0)
+            {
+                Console.WriteLine("Can't Login");
+>>>>>>> a323dde2b37753a0b80afd4caebd54e46a9c496f
             }else{
                 loginID = login; 
                 Console.Clear();
@@ -425,7 +433,6 @@ namespace ConsoleAppPL
             {
                 var keyInfo = Console.ReadKey(intercept: true);
                 key = keyInfo.Key;
-
                 if (key == ConsoleKey.Backspace && pass.Length > 0)
                 {
                     Console.Write("\b \b");

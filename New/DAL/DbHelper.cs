@@ -13,11 +13,16 @@ namespace DAL
             {
                 connection = new MySqlConnection
                 {
+<<<<<<< HEAD
                     ConnectionString = "server=localhost;user id=vtca;password=vtcacademy;port=3306;database=logindb;"
+=======
+                    ConnectionString = " server=localhost;user id=vtca;password=vtcacademy;port=3306;database=LoginDB; "
+>>>>>>> a323dde2b37753a0b80afd4caebd54e46a9c496f
                 };
             }
             return connection;
         }
+<<<<<<< HEAD
 
         public static MySqlDataReader ExecQuery(string query)
         {
@@ -86,3 +91,8 @@ namespace DAL
         }
     }
 }
+=======
+        private DbHelper(){}
+    }
+}
+>>>>>>> a323dde2b37753a0b80afd4caebd54e46a9c496f
