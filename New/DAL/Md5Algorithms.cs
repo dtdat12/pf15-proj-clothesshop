@@ -16,8 +16,4 @@ namespace DAL
             }
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a323dde2b37753a0b80afd4caebd54e46a9c496f
