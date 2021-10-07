@@ -11,8 +11,9 @@ namespace Persistence
         public ItemDetails itemDetail{set;get;}
         public override string ToString()
         {
+            // Console.WriteLine(String.Format("{0:0,0 VND}",itemPrice));
             return String.Format("|{0,-5}\t|{1,-15}|{2,-7}|{3,-18}|"
-            ,itemID,itemDetail.ColorName,itemDetail.SizeName,itemPrice);
+            ,itemID,itemDetail.ColorName,itemDetail.SizeName,String.Format("{0:0,0 VND}",itemPrice));
         }
     }
 }

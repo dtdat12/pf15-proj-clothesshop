@@ -316,7 +316,7 @@ namespace ConsoleAppPL
                 total += invoiceDetail.itemPrice*invoiceDetail1.quantity;
                 Console.WriteLine("+------------------------------------------------------------------------------------------+");
             }
-            Console.WriteLine("                                                                      Total amount:"+total);
+            Console.WriteLine("                                                               Total amount: "+String.Format("{0:0,0 VND}", total));
             Console.WriteLine("--------------------------------------------------------------------------------------------");
             Console.WriteLine("Amount in words: ");
             Console.WriteLine("--------------------------------------------------------------------------------------------");

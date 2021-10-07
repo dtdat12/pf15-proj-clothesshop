@@ -25,7 +25,7 @@ namespace Persistence
 
         public override string ToString()
         {
-            return String.Format("| {0}\t| {1,-25} \t| {2,-65} \t| {3,-5}\t |",ItemId,ItemName,ItemDescription,ItemPrice);
+            return String.Format("| {0}\t| {1,-25} \t| {2,-65} \t| {3,-5}\t |",ItemId,ItemName,ItemDescription,String.Format("{0:0,0 VND}",ItemPrice));
         }   
     }
 }
