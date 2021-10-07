@@ -13,8 +13,8 @@ namespace DAL
           connection.Open();
           MySqlCommand command = connection.CreateCommand();
           command.CommandText = "select * from Cashiers where username='"+
-            cashier.UserName+"' and password='"+
-            Md5Algorithms.CreateMD5(cashier.Password)+"';";
+          cashier.UserName+"' and password='"+
+          Md5Algorithms.CreateMD5(cashier.Password)+"';";
           MySqlDataReader reader = command.ExecuteReader();
           if(reader.Read()){
             login = reader.GetInt32("role");
