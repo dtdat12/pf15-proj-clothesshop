@@ -44,7 +44,7 @@ create table ItemDetails(
 	item_id int not null,
     color_id int not null,
     size_id int not null,
-	quantity int not null default 1,
+    quantity int not null default 1,
     constraint pk_ItemDetails primary key(item_id, color_id, size_id),  
     constraint fk_ItemDetails_Items foreign key(item_id) references Items(item_id),
     constraint fk_ItemDetails_Colors foreign key(color_id) references Colors(color_id),
@@ -56,19 +56,19 @@ create table Invoices(
 	invoice_no int auto_increment primary key,
     cashier_id int not null,
     customer_id int not null,
-	invoice_date datetime default now() not null,
-	constraint fk_Invoices_Cashiers foreign key(cashier_id) references Cashiers(cashier_id),
-	constraint fk_Invoices_Customers foreign key(customer_id) references Customers(customer_id)
+    invoice_date datetime default now() not null,
+    constraint fk_Invoices_Cashiers foreign key(cashier_id) references Cashiers(cashier_id),
+    constraint fk_Invoices_Customers foreign key(customer_id) references Customers(customer_id)
 );	
 
 drop table InvoiceDetails;
 create table InvoiceDetails(
 	invoice_no int not null,
     item_id int not null,
-	item_price decimal(18,3) not null,
+    item_price decimal(18,3) not null,
     constraint pk_InvoiceDetails primary key(invoice_no, item_id),  
     constraint fk_InvoiceDetails_Invoices foreign key(invoice_no) references Invoices(invoice_no),
-	constraint fk_InvoiceDetails_Items foreign key(item_id) references Items(item_id)
+    constraint fk_InvoiceDetails_Items foreign key(item_id) references Items(item_id)
 );
 
 insert into Customers(customer_name, customer_address, telephone) values 
@@ -125,47 +125,3 @@ insert into Cashiers (cashier_id, cashier_name, user_name, user_pass, telephone)
 		(1, 'shopclothes', 'Clothes', 'f637569d1f2b1af93c463b312f2d77de', '0982942754');
 select * from Cashiers;
 select * from Cashiers where user_name='Clothes' and user_pass='f637569d1f2b1af93c463b312f2d77de';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
