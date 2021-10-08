@@ -31,6 +31,7 @@ namespace DALTest
         {
             Cashier cashier = new Cashier(){UserName=userName, Password=pass};
             int result = dal.Login(cashier);
+            // Assert.True(result != null);
             Assert.True(expected == result);
         }
     }

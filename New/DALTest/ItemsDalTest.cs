@@ -41,7 +41,8 @@ namespace DALTest
         [InlineData(2, 2)]
         [InlineData(3, 3)]
         [InlineData(4, 4)]
-        [InlineData(10, 10)]
+        [InlineData(5, 5)]
+        [InlineData(6, 6)]
 
         // [InlineData(-1, 0)]
         // [InlineData(11, 0)]
@@ -69,6 +70,7 @@ namespace DALTest
         {
             List<Item> lstItem = new List<Item>();
             lstItem = dal.GetByPriceRange(_min, _max);
+
         if (found)
         {
             Assert.True(lstItem != null);

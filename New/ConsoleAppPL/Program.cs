@@ -291,6 +291,7 @@ namespace ConsoleAppPL
             {
                 invoiceDetail1.invoicesNO = invoiceID;
                 invoiceDetailDAL.InsertInvoiceDetail(invoiceDetail1);
+                Console.WriteLine(String.Format("{0:0,0 VND}",invoiceDetail.itemPrice));
             }
             Console.Clear();
             string logo = @"                     
@@ -311,7 +312,7 @@ namespace ConsoleAppPL
             Console.WriteLine("\t");
             Console.WriteLine("-------------------------------------------------------------------------------------------\n");
             Console.WriteLine("+------------------------------------------------------------------------------------------+");
-            Console.WriteLine(String.Format("|{0,-5}|{1,-10}|{2,-30}|{3,10}|{4,10}|{5,20}|","No","ItemID","ItemName","ItemPrice","Quantity","Price"));
+            Console.WriteLine(String.Format("|{0,-5}|{1,-10}|{2,-30}|{3,10}|{4,10}|{5,20}|","No","ItemID","ItemName","ItemPrice","Quantity","Amount"));
             Console.WriteLine("+------------------------------------------------------------------------------------------+");
             decimal total = 0;
             int stt = 0;
@@ -320,7 +321,7 @@ namespace ConsoleAppPL
             foreach(InvoiceDetail invoiceDetail1 in invoiceDetails)
             {
                 Console.WriteLine(String.Format("|{0,-5}|{1,-10}|{2,-30}|{3,10}|{4,10}|{5,20}|",stt++,invoiceDetail1.itemID
-                ,itemDAL.GetItemById(invoiceDetail1.itemID).ItemName,invoiceDetail.itemPrice,invoiceDetail1.quantity,invoiceDetail.itemPrice*invoiceDetail1.quantity));
+                ,itemDAL.GetItemById(invoiceDetail1.itemID).ItemName,String.Format("{0:0,0 VND}",invoiceDetail.itemPrice),invoiceDetail1.quantity,invoiceDetail1.itemPrice*invoiceDetail1.quantity));
                 total += invoiceDetail.itemPrice*invoiceDetail1.quantity;
                 Console.WriteLine("+------------------------------------------------------------------------------------------+");
             }
