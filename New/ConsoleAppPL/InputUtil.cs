@@ -9,10 +9,12 @@ namespace ConsoleAppPL
             int n;
             return int.TryParse(num, out n);
         }
+
         public static int readINT()
         {
             start:
             string num = Console.ReadLine();
+            
             if(isINT(num))
             {
                 return int.Parse(num);

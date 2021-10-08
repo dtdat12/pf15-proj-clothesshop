@@ -14,7 +14,6 @@ namespace DAL
         public ItemsDAL()
         {
             connection = DBHelper.GetConnection();
-
         }
 
         public Item GetItemById(int itemId)
@@ -29,10 +28,12 @@ namespace DAL
             MySqlCommand command = new MySqlCommand(query, connection);
             reader = command.ExecuteReader();
             Item item = null;
+
             if (reader.Read())
             {
                 item = GetItem(reader);
             }
+
             reader.Close();
             connection.Close();
             return item;
@@ -67,11 +68,14 @@ namespace DAL
             {
                 return null;
             }
+
             if(connection.State == System.Data.ConnectionState.Closed)
             {
                 connection.Open();
             }
+
             MySqlCommand command = new MySqlCommand("", connection);
+
             switch(itemFilter)
             {
                 case ItemFilter.GET_ALL:

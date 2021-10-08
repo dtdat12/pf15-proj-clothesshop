@@ -9,10 +9,12 @@ namespace Persistence
         public decimal itemPrice {set;get;}
         public int quantity{set;get;}
         public ItemDetails itemDetail{set;get;}
+        
         public override string ToString()
         {
             return String.Format("|{0,-5}\t|{1,-15}|{2,-7}|{3,-18}|"
-            ,itemID,itemDetail.ColorName,itemDetail.SizeName,String.Format("{0:0,0 VND}",itemPrice));
+            ,itemID,itemDetail.ColorName,itemDetail.SizeName,
+            String.Format("{0:0,0 VND}",itemPrice));
         }
     }
 }

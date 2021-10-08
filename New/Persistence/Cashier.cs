@@ -2,6 +2,7 @@ using System;
 
 namespace Persistence
 {
+
     public class Cashier
     {
         public int CashierId {set;get;}
@@ -10,4 +11,5 @@ namespace Persistence
         public string Password {set;get;}
         public string Telephone {set;get;} 
     }
+    
 }

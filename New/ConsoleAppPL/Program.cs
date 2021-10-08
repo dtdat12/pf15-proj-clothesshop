@@ -26,6 +26,7 @@ namespace ConsoleAppPL
                 Console.Clear();
                 return items;
             }
+
             Console.Clear();
             Console.WriteLine("\n{0} results for keyword: \n" + name, Count);
             Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
@@ -37,6 +38,7 @@ namespace ConsoleAppPL
                 Console.WriteLine(i.ToString());
                 Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
             }
+
             Console.WriteLine("\nPress any keys to back search menu...");
             Console.ReadKey();
             Console.Clear();
@@ -60,6 +62,7 @@ namespace ConsoleAppPL
                 Console.Clear();
                 return null;
             }
+
             else
             {
                 Console.WriteLine("\n1 result\n");
@@ -69,6 +72,7 @@ namespace ConsoleAppPL
                 Console.WriteLine(item.ToString());
                 Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
             }
+
             Console.WriteLine("\nPress any keys to continue...");
             Console.ReadKey();
             Console.Clear();
@@ -105,6 +109,7 @@ namespace ConsoleAppPL
                 Console.WriteLine(i.ToString());
                 Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
             }
+
             Console.WriteLine("\nPress any keys to back search menu...");
             Console.ReadKey();
             Console.Clear();
@@ -114,6 +119,7 @@ namespace ConsoleAppPL
         static void SearchMenu()
         {
             int choose = 0;
+
             do
             {
                 string logo = @"===================================================================
@@ -261,9 +267,9 @@ namespace ConsoleAppPL
             }
 
             Console.Clear();
-            Console.WriteLine("                    +---------------------------+");
-            Console.WriteLine("                    |     CUSTOMER INFO ADD     |");
-            Console.WriteLine("                    +---------------------------+");
+            Console.WriteLine("                       +---------------------------+");
+            Console.WriteLine("                       |     CUSTOMER INFO ADD     |");
+            Console.WriteLine("                       +---------------------------+");
             Console.WriteLine("\t");
             Console.WriteLine(customer.ToString());
             Console.WriteLine("\t");

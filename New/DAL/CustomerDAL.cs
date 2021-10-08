@@ -9,6 +9,7 @@ namespace DAL
     {
         private string query;
         private MySqlDataReader reader;
+        
         public Customer GetCustomerByID(int cusID)
         {
             query = @"select * from customers where customer_id = "+cusID;
