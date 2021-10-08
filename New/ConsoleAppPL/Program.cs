@@ -15,6 +15,7 @@ namespace ConsoleAppPL
             String name = Console.ReadLine();
             ItemDAL itemDAL = new ItemDAL();
             List<Item> items=  itemDAL.GetByName(name);
+            
             if(items.Count == 0)
             {
                 Console.WriteLine("\nNot found items!");
