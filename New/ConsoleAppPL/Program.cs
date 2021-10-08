@@ -19,7 +19,7 @@ namespace ConsoleAppPL
 
             if(items.Count == 0)
             {
-                Console.WriteLine("\n{0} results for keyword: \n" + name, Count);
+                Console.WriteLine("\n{0} results for keyword: " + name, Count);
                 Console.WriteLine("\nNot found items!");
                 Console.WriteLine("Press any keys to back search menu...");
                 Console.ReadKey();
@@ -28,7 +28,8 @@ namespace ConsoleAppPL
             }
 
             Console.Clear();
-            Console.WriteLine("\n{0} results for keyword: \n" + name, Count);
+            Console.WriteLine("\n{0} results for keyword: " + name, Count);
+            Console.WriteLine("\t");
             Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
             Console.WriteLine("| ID    | Item Name                   \t| Item Description                                              \t| Item Price \t |");
             Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
@@ -196,7 +197,7 @@ namespace ConsoleAppPL
             Console.WriteLine("Telephone: ");
             customer.Telephone = Console.ReadLine();
             Console.WriteLine("\nAdd successful customer information!");
-            Console.WriteLine("Press any keys to continue...");
+            Console.WriteLine("Press any keys to continue add items to invoice...");
             Console.ReadKey();
             List<InvoiceDetail> invoiceDetails = new List<InvoiceDetail>();
             int choose = 0;
@@ -216,7 +217,8 @@ namespace ConsoleAppPL
                     Console.ReadKey();
                     Console.Clear();
                 }
-                else{
+                else
+                {
                     ItemDAL itemmDAL = new ItemDAL();
                     List<ItemDetails> itemDetails = itemmDAL.GetItemDetailByItemID(invoiceDetail.itemID);
                     Console.WriteLine("+-------------------------------------------------------+");
@@ -318,7 +320,7 @@ namespace ConsoleAppPL
                                          |___/                    |_|";
             Console.WriteLine(logo);
             Console.WriteLine("\n               DC: 18 Tam Trinh, Minh Khai, Hai Ba Trung, Ha Noi");
-            Console.WriteLine("                              DT: 012.3400.0056");
+            Console.WriteLine("                              DT: 012.3400.0056\n");
             Console.WriteLine("\n                                BILL OF SALE\n");
             Console.WriteLine(invoice.ToString());
             Console.WriteLine("Seller: ClothingShop                                   Cashier Name: dtdat\n");
