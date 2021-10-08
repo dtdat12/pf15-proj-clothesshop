@@ -15,6 +15,8 @@ namespace DALTest
         [InlineData("Three-Stripes shorts", 2)]
         [InlineData("pants", 3)]
         [InlineData("Yoga pants", 4)]
+        [InlineData("Logo", 5)]
+        [InlineData("Logo box graphic tee", 6)]
         [InlineData("jacket", 7)]
         [InlineData("Marathon jacket", 8)]
         [InlineData("hoodie", 9)]
@@ -23,6 +25,12 @@ namespace DALTest
         [InlineData("11111", 0)]
         [InlineData("Lo go", 0)]
         [InlineData("b ox 11111", 0)]
+        [InlineData("-1000", 0)]
+        [InlineData("jacket123", 0)]
+        [InlineData("123", 0)]
+        [InlineData("==", 0)]
+        [InlineData("??", 0)]
+        [InlineData("+1000", 0)]
         
         public void GetNameTest(string _name, int expected)
         {

@@ -14,17 +14,20 @@ namespace ConsoleAppPL
             Console.WriteLine("Input search items: ");
             String name = Console.ReadLine();
             ItemDAL itemDAL = new ItemDAL();
-            List<Item> items=  itemDAL.GetByName(name);
-            
+            List<Item> items = itemDAL.GetByName(name);
+            int Count = items.Count;
+
             if(items.Count == 0)
             {
+                Console.WriteLine("\n{0} results for keyword: \n" + name, Count);
                 Console.WriteLine("\nNot found items!");
                 Console.WriteLine("Press any keys to back search menu...");
                 Console.ReadKey();
                 Console.Clear();
                 return items;
             }
-            Console.WriteLine("\t");
+            Console.Clear();
+            Console.WriteLine("\n{0} results for keyword: \n" + name, Count);
             Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
             Console.WriteLine("| ID    | Item Name                   \t| Item Description                                              \t| Item Price \t |");
             Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
@@ -39,17 +42,19 @@ namespace ConsoleAppPL
             Console.Clear();
             return items;
         }
-        
+ 
         static Item SearchItemByID()
         {
             Console.Clear();
             Console.WriteLine("Enter ID to search: ");
             int itemID = InputUtil.readINT(); 
             ItemDAL itemDAL = new ItemDAL();
-            Item item =  itemDAL.GetItemById(itemID);
+            Item item = itemDAL.GetItemById(itemID);
+
             if(item == null)
             {
-                Console.WriteLine("\nNot found item!");
+                Console.WriteLine("\n0 result\n");
+                Console.WriteLine("Not found item!");
                 Console.WriteLine("Press any keys to continue...");
                 Console.ReadKey();
                 Console.Clear();
@@ -57,7 +62,7 @@ namespace ConsoleAppPL
             }
             else
             {
-                Console.WriteLine("\t");
+                Console.WriteLine("\n1 result\n");
                 Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("| ID    | Item Name                   \t| Item Description                                              \t| Item Price \t |");
                 Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
@@ -78,16 +83,19 @@ namespace ConsoleAppPL
             Console.WriteLine("Max: ");
             int toPrice = InputUtil.readINT();
             ItemDAL itemDAL = new ItemDAL();
-            List<Item> items=  itemDAL.GetByPriceRange(fromPrice,toPrice);
+            List<Item> items = itemDAL.GetByPriceRange(fromPrice,toPrice);
+            int Count = items.Count;
+
             if(items.Count == 0)
             {
+                Console.WriteLine("\n{0} results", Count);
                 Console.WriteLine("\nNot found items!");
                 Console.WriteLine("Press any keys to back search menu...");
                 Console.ReadKey();
                 Console.Clear();
                 return items;
             }
-                Console.WriteLine("\t");
+                Console.WriteLine("\n{0} results\n", Count);
                 Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
                 Console.WriteLine("| ID    | Item Name                   \t| Item Description                                              \t| Item Price \t |");
                 Console.WriteLine("+--------------------------------------------------------------------------------------------------------------------------------+");
