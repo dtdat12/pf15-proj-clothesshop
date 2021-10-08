@@ -319,8 +319,8 @@ namespace ConsoleAppPL
          \____|_|\___/ \__|_| |_|_|_| |_|\__, | |____/|_| |_|\___/| .__/ 
                                          |___/                    |_|";
             Console.WriteLine(logo);
-            Console.WriteLine("\n               DC: 18 Tam Trinh, Minh Khai, Hai Ba Trung, Ha Noi");
-            Console.WriteLine("                              DT: 012.3400.0056\n");
+            Console.WriteLine("\n               DC: 18 Tam Trinh, Minh Khai, Hai Ba Trung, Ha Noi\n");
+            Console.WriteLine("                              DT: 012.3400.0056");
             Console.WriteLine("\n                                BILL OF SALE\n");
             Console.WriteLine(invoice.ToString());
             Console.WriteLine("Seller: ClothingShop                                   Cashier Name: dtdat\n");
@@ -338,15 +338,15 @@ namespace ConsoleAppPL
             foreach(InvoiceDetail invoiceDetail1 in invoiceDetails)
             {
                 Console.WriteLine(String.Format("|{0,-5}|{1,-10}|{2,-30}|{3,10}|{4,10}|{5,20}|",stt++,invoiceDetail1.itemID
-                ,itemDAL.GetItemById(invoiceDetail1.itemID).ItemName,String.Format("{0:0,0 VND}",invoiceDetail.itemPrice),invoiceDetail1.quantity,invoiceDetail1.itemPrice*invoiceDetail1.quantity));
+                ,itemDAL.GetItemById(invoiceDetail1.itemID).ItemName,invoiceDetail.itemPrice,invoiceDetail1.quantity,invoiceDetail1.itemPrice*invoiceDetail1.quantity));
                 total += invoiceDetail.itemPrice*invoiceDetail1.quantity;
                 Console.WriteLine("+------------------------------------------------------------------------------------------+");
             }
             
-            Console.WriteLine("                                                                Total amount: "+String.Format("{0:0,0 VND}", total));
+            Console.WriteLine("                                                                    Total amount: "+String.Format("{0:0,0 VND}", total));
             Console.WriteLine("--------------------------------------------------------------------------------------------");
-            Console.WriteLine("\n                              THANK YOU AND SEE YOU AGAIN\n");
-            Console.WriteLine("                     Hotline: 1900333999     Website: clothingshop.com");
+            Console.WriteLine("\n                            THANK YOU AND SEE YOU AGAIN\n");
+            Console.WriteLine("                   Hotline: 1900333999     Website: clothingshop.com");
             Console.WriteLine("\n\nPress any keys to continue...");
             Console.ReadKey();
             Console.Clear();
