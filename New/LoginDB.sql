@@ -95,7 +95,7 @@ insert into Sizes(size_id, size_name) values
 select * from Sizes;
 
 insert into Items(item_id, item_name, item_description, item_price) values
-(1, 'Own the run shorts', 'Inspired by adidas heritage, Adicolor is authentic but modern', 700),
+(1, 'Own the run shorts', 'Inspired by adidas heritage, Adicolor is authentic yet modern', 700),
 (2, 'Three-Stripes shorts', 'Keep all your valuables  with packable front zip', 800),
 (3, 'Tokyo pack sweat pants', 'A drawcord waist lets you adjust the fit so you comfortable', 900),
 (4, 'Yoga pants', 'Wash light color separate from dark color', 600),
@@ -104,7 +104,7 @@ insert into Items(item_id, item_name, item_description, item_price) values
 (7, 'Rain jacket', 'Feel dry and serene wearing this light weight and breathable jacket', 500),
 (8, 'Marathon jacket', 'Item is made with Primeblue, a high-performance recycled material', 100),
 (9, 'Mike hoodie', 'This product is made with organic cotton', 550),
-(10, 'Hulk hoodie', 'This product is made with of high-performance recycled materials', 450);
+(10, 'Hulk hoodie', 'This product is made of high-performance recycled materials', 450);
 select * from Items;
 
 insert into ItemDetails(item_id, color_id, size_id, quantity) values 
