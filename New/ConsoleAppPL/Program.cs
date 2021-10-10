@@ -345,8 +345,8 @@ namespace ConsoleAppPL
             
             Console.WriteLine("                                                                    Total amount: "+String.Format("{0:0,0 VND}", total));
             Console.WriteLine("--------------------------------------------------------------------------------------------");
-            Console.WriteLine("\n                            THANK YOU AND SEE YOU AGAIN\n");
-            Console.WriteLine("                   Hotline: 1900333999     Website: clothingshop.com");
+            Console.WriteLine("\n                           THANK YOU AND SEE YOU AGAIN\n");
+            Console.WriteLine("                  Hotline: 1900333999     Website: clothingshop.com");
             Console.WriteLine("\n\nPress any keys to continue...");
             Console.ReadKey();
             Console.Clear();
