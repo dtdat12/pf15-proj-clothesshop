@@ -44,8 +44,7 @@ namespace ConsoleAppPL
             Console.ReadKey();
             Console.Clear();
             return items;
-        }
-// Search Page 
+        } 
         static Item SearchItemByID()
         {
             Console.Clear();
@@ -350,10 +349,11 @@ namespace ConsoleAppPL
             Console.WriteLine("\n\nPress any keys to continue...");
             Console.ReadKey();
             Console.Clear();
+            // Console.WriteLine("Amount in words: ");
+            // Console.WriteLine("Amount paid: "); 
+            // Console.WriteLine("Amount returned: ");
         }
-// Amount in words
-// Amount paid 
-// Amount returned
+
         static void menu()
         {
             int choose = 0;
